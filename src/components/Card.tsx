@@ -10,8 +10,14 @@ function Card({ title="default", background="yellow", rotateY, translateZ="250px
     }, [rotation])
     return (
         <div className={styles.card} style={{ backgroundColor:`${background}`, transform: `rotateY(${rotate}deg) translateZ(${translateZ})`}}>
-            <h1>{weather.name}</h1>
-            <p>{weather.temp}</p>
+            <div className={styles.data}>DATA</div>
+            <div className={styles.max}>MAX</div>
+            <div className={styles.min}>MIN</div>
+            <div className={styles.temp}>TEMP</div>
+            <div className={styles.feelsLike}>FEELS LIKE</div>
+            <div className={styles.city}>CITY</div>
+            <div className={styles.icon}>ICON</div>
+            <div className={styles.description}>DESC</div>
         </div>
     )
 }

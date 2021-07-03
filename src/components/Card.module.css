@@ -1,5 +1,5 @@
 .card {
-    display: block;
+    display: grid;
     position: absolute;
     background: #000;
     width: 250px;
@@ -10,4 +10,96 @@
     color: #FFF;
     opacity: 0.95;
     border-radius: 10px;
+
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+}
+
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.max {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.min {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.feelsLike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+
+    grid-row-start: 4;
+    grid-row-end: 4;
 }
