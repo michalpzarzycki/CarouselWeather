@@ -9,15 +9,15 @@ function Card({ title="default", background="yellow", rotateY, translateZ="250px
      console.log("WEATHER", weather)
     }, [rotation])
     return (
-        <div className={styles.card} style={{ backgroundColor:`${background}`, transform: `rotateY(${rotate}deg) translateZ(${translateZ})`}}>
-            <div className={styles.data}>DATA</div>
-            <div className={styles.max}>MAX</div>
-            <div className={styles.min}>MIN</div>
-            <div className={styles.temp}>TEMP</div>
-            <div className={styles.feelsLike}>FEELS LIKE</div>
-            <div className={styles.city}>CITY</div>
+        <div className={styles.card} style={{ transform: `rotateY(${rotate}deg) translateZ(${translateZ})`}}>
+            <div className={styles.data}>{weather.name}</div>
+            <div className={styles.max}>{weather.temp_max}🠕</div>
+            <div className={styles.min}>🠗{weather.temp_min}</div>
+            <div className={styles.temp}>{weather.temp}</div>
+            <div className={styles.feelsLike}>Feels like: {weather.feels_like}</div>
+            <div className={styles.city}>{weather.name}</div>
             <div className={styles.icon}>ICON</div>
-            <div className={styles.description}>DESC</div>
+            <div className={styles.description}>{weather.descriptions}</div>
         </div>
     )
 }
