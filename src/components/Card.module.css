@@ -38,6 +38,7 @@
     grid-row-start: 2;
     grid-row-end: 2;
     color: red;
+    font-weight: bolder;
 }
 
 .min {
@@ -50,6 +51,7 @@
     grid-row-start: 2;
     grid-row-end: 2;
     color: blue;
+    font-weight: 900;
 }
 
 .temp {
@@ -94,9 +96,11 @@
     align-items: center;
     grid-column-start: 3;
     grid-column-end: 3;
-
     grid-row-start: 3;
     grid-row-end: 3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .description {
