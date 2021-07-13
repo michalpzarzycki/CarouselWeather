@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './Card.module.css'
 
-function Card({ title="default", background="yellow", rotateY, translateZ="250px", rotation, idx, weather }: any) {
+function Card({ rotateY, translateZ="250px", rotation, idx, weather }: any) {
     const [rotate, setRotate] = useState(rotateY)
     useEffect(() => {
         setRotate(rotate+60)

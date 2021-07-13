@@ -1,10 +1,10 @@
 import styles from './Button.module.css'
 
-function Button({ handleClick }: any) {
+function Button({ handleClick, isRight }: any) {
     return (
-        <div>
-            <button onClick={handleClick}>CLICK</button>
-        </div>
+        
+            <button onClick={handleClick} className={styles.button} style ={{ transform: isRight ? 'rotateZ(180deg)' : ""}}></button>
+        
     )
 }
 

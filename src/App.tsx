@@ -24,9 +24,9 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <Button handleClick={() => setRotation(!rotation)}/>
+      <Button handleClick={() => setRotation(!rotation)} isRight={false}/>
       <CarouselWeather rotation={rotation} weathers={weathers}/>
-      <Button handleClick={() => setRotation(!rotation)}/>
+      <Button handleClick={() => setRotation(!rotation)} isRight={true}/>
     </div>
   );
 }
