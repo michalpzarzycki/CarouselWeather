@@ -6,7 +6,7 @@ import {fetchWeather} from './utils/fetchWeather'
 import {weatherDataConvert} from './utils/weatherDataConventer'
 let cities = ['Gdansk', 'Los Angeles', 'Madrid', 'Buenos Aires', 'Tokyo', 'Polkowice']
 function App() {
-  const [rotation, setRotation] = useState(false);
+  const [rotation, setRotation] = useState<{rotateLeft: boolean, rotateRight: boolean}>({rotateLeft: false, rotateRight: false});
 
   const [weathers, setWeathers] = useState<any[]>([])
 
@@ -24,9 +24,9 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <Button handleClick={() => setRotation(!rotation)} isRight={false}/>
+      <Button handleClick={() => setRotation({rotateLeft: true, rotateRight: false})} isRight={false}/>
       <CarouselWeather rotation={rotation} weathers={weathers}/>
-      <Button handleClick={() => setRotation(!rotation)} isRight={true}/>
+      <Button handleClick={() => setRotation({rotateLeft: false, rotateRight: true})} isRight={true}/>
     </div>
   );
 }

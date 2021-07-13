@@ -4,8 +4,13 @@ import styles from './Card.module.css'
 function Card({ rotateY, translateZ="250px", rotation, idx, weather }: any) {
     const [rotate, setRotate] = useState(rotateY)
     useEffect(() => {
-        setRotate(rotate+60)
+        if(rotation.rotateLeft) {
+            setRotate(rotate-60)
+        } else {
+            setRotate(rotate+60)
+        }
         console.log(weather)
+        console.log(rotate)
     }, [rotation])
     return (
         <div className={styles.card} style={{ transform: `rotateY(${rotate}deg) translateZ(${translateZ})`}}>
