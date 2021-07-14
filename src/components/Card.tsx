@@ -9,8 +9,6 @@ function Card({ rotateY, translateZ="250px", rotation, idx, weather }: any) {
         } else {
             setRotate(rotate+60)
         }
-        console.log(weather)
-        console.log(rotate)
     }, [rotation])
     return (
         <div className={styles.card} style={{ transform: `rotateY(${rotate}deg) translateZ(${translateZ})`}}>
